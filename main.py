@@ -1,7 +1,7 @@
 import tornado.ioloop
 import tornado.web
 import os
-from tornado_swagger.setup import setup_swagger
+# from tornado_swagger.setup import setup_swagger
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
@@ -29,7 +29,7 @@ def main():
     routes= [
         (r"/", MainHandler)
     ]
-    setup_swagger(routes,swagger_url="/doc")
+    # setup_swagger(routes,swagger_url="/doc")
     application = tornado.web.Application(routes,
         autoreload=True
     )
